@@ -1,0 +1,12 @@
+.btn-link{
+    background-color: #222;
+    color: #fff;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    transition: 0.5;
+    font-weight: bold;
+}
+.btn-link:hover{
+    color: #ffbb33;
+    box-shadow: 0 0 5px rgb(245, 225, 4);
+}

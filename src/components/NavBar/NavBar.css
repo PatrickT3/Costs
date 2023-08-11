@@ -1,0 +1,36 @@
+.divHeader{
+    font-size: 20px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+}
+.menu{
+    list-style: none; 
+    display: flex; 
+    padding: 0; 
+}
+.links{
+    color: #fff;
+    text-decoration: none;
+    margin: 10px;
+    padding: 1em;
+    border-radius: 15px; 
+    
+}
+.links:hover{
+    color: rgb(245, 225, 4); 
+    box-shadow: 0 0 20px rgb(245, 225, 4); 
+}
+.imgShine {
+    display: inline-block;  
+    transition: transform 0.2s ease-in-out;
+    margin-left: 40px;
+  }
+  
+.imgShine:hover {
+    transform: scale(1.4); 
+}
+
+  

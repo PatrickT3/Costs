@@ -1,0 +1,27 @@
+.fooo{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+.ul-princ{
+    list-style: none;
+    display: flex; 
+    justify-content: center;
+}
+.sinbol{
+    font-size: 20px;
+    margin: 10px;
+    transition: transform 0.2s ease-in-out;
+}
+.sinbol:hover{
+    cursor: pointer;
+    color:rgb(245, 225, 4);
+    transform: scale(1.50);  
+}
+p{
+    font-size: 20px;
+}
+p span{
+    color: rgb(245, 225, 4);;
+}

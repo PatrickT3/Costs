@@ -1,0 +1,13 @@
+.sform{
+    margin: 0 auto;
+    padding: 2em;
+}
+.sform h1{
+    font-size: 30px;
+    margin: 20px 0px 10px;
+    font-weight: bold;
+}
+.sform p{
+    margin-bottom: 1.5em;
+    color: #7b7b7b;
+}
