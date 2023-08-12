@@ -6,7 +6,13 @@ const Select = ({text,name,options,handleOnChange,value}) => {
     <div className='Sdiv'>
         <label htmlFor={name}>{text}:</label>
         <select name={name} id={name} className='Scss'>
-            <option disabled >selecine a categoria</option>
+            <option value="" disabled selected >{text}</option>
+            {options && Array.isArray(options) && // Verificação de options
+              options.map(option => (
+                <option value={option.id} key={option.id}>
+                  {option.name}
+                </option>
+              ))}
         </select>
     </div>
   )

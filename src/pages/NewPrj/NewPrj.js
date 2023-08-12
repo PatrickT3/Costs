@@ -1,10 +1,24 @@
-import React from 'react'
+import React,{useEffect,useState} from 'react'
 import './Newprj.css'
 import Input from '../../components/Form/input/Input'
 import Select from '../../components/Form/Select/Select'
 import FLbutton from '../../components/Form/FLbutton/FLbutton'
 
 const NewPrj = () => {
+  const [categoria, setCategoria] = useState([]);
+  useEffect(() => {
+    fetch('http://localhost:5000/categories',{
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+    .then(resp => resp.json())
+    .then(data => {setCategoria(data)})
+    .catch((err) => console.log(err))
+  },[])
+
+
   return (
     <section className='sform'>
       <h1> Criar Projeto </h1>
@@ -23,10 +37,11 @@ const NewPrj = () => {
           text={"Orçamento do projeto"}
         ></Input>
         <Select
+          options={categoria}
           text={"Selecione a Categoria"}
           name={"categoria_id"}
         ></Select>
-        <FLbutton text={"Criar Projeto"}></FLbutton>
+        <FLbutton text={"Criar Projeto"} ></FLbutton>
       </form>
     </section>
   )

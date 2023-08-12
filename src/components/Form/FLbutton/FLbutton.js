@@ -1,9 +1,9 @@
 import React from 'react'
 import './FLbutton.css'
 
-const FLbutton = () => {
+const FLbutton = ({text}) => {
   return (
-    <button className='bbtn'>FLbutton</button>
+    <button className='bbtn'>{text}</button>
   )
 }
 

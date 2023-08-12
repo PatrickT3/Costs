@@ -12,3 +12,7 @@
     border-radius: 0;
     border: none;
 }
+
+.Sdiv option{
+    color: brown;
+}
