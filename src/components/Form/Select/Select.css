@@ -1,0 +1,14 @@
+.Sdiv{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+.Sdiv label{
+    margin-bottom: .6em;
+    font-weight: bold;
+}
+.Sdiv select{
+    padding: .7em;
+    border-radius: 0;
+    border: none;
+}

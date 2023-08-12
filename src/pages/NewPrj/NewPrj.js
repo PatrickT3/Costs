@@ -1,5 +1,8 @@
 import React from 'react'
 import './Newprj.css'
+import Input from '../../components/Form/input/Input'
+import Select from '../../components/Form/Select/Select'
+import FLbutton from '../../components/Form/FLbutton/FLbutton'
 
 const NewPrj = () => {
   return (
@@ -7,20 +10,23 @@ const NewPrj = () => {
       <h1> Criar Projeto </h1>
       <p>Crie Projetos para depois adicionar os serviços</p>
       <form >
-        <div>
-          <input type="text" placeholder='insira o nome do projeto'/>
-        </div>
-        <div>
-          <input type="number" placeholder='insira o orçamento'/>
-        </div>
-        <div>
-          <select name="category_id">
-            <option disabled >selecine a categoria</option>
-          </select>
-        </div>
-        <div>
-          <input type="submit" value="Criar Projeto"/>
-        </div>
+        <Input
+          name={"name"}
+          type={"text"}
+          placeholder={"Insira o nome do projeto"}
+          text={"Nome do Projeto"}
+        ></Input>
+        <Input  
+          type={"number"}
+          name={"budget"}
+          placeholder={"Insira o orçamento total"} 
+          text={"Orçamento do projeto"}
+        ></Input>
+        <Select
+          text={"Selecione a Categoria"}
+          name={"categoria_id"}
+        ></Select>
+        <FLbutton text={"Criar Projeto"}></FLbutton>
       </form>
     </section>
   )
