@@ -35,7 +35,7 @@ const NewPrj = () => {
     })
     .then((resp) => resp.json)
     .then(
-      history('/Project')
+      history('/Project',{ state: { message: 'Projeto criado com sucesso!' } })
     ).catch((err) => console.log(err))
   }
   const submit = (e) => {
