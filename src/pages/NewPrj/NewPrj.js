@@ -66,7 +66,7 @@ const NewPrj = () => {
           text={"Nome do Projeto"}
           handleOnChange={handleChange}
           value={project.name ? project.name : ''}
-          ></Input>
+        ></Input>
         <Input  
           type={"number"}
           name={"budget"}

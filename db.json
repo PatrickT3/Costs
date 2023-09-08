@@ -1,5 +1,41 @@
 {
-  "projects": [ ],
+  "projects": [
+    {
+      "cost": 0,
+      "services": [],
+      "id": 1
+    },
+    {
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      },
+      "name": [
+        "PEDRO DE SOUZA TEIXEIRA"
+      ],
+      "budget": [
+        "23"
+      ],
+      "cost": 0,
+      "services": [],
+      "id": 2
+    },
+    {
+      "name": [
+        "PEDRO DE SOUZA TEIXEIRA"
+      ],
+      "budget": [
+        "74"
+      ],
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 3
+    }
+  ],
   "categories": [
     {
       "id": 1,
