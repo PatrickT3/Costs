@@ -10,6 +10,7 @@ import Company from "./pages/company/Company";
 import Contact from "./pages/contact/Contact";
 import Project from "./pages/Project/Project";
 import NewPrj from './pages/NewPrj/NewPrj';
+import ProjectEdit from './pages/ProjectEdit/ProjectEdit';
 // COMPONENTS
 import App from './App';
 import Container from './layout/Container';
@@ -27,6 +28,8 @@ root.render(
           <Route path='/Company' element={<Company/>}/>
           <Route path='/Project' element={<Project/>}/>
           <Route path='/NewProj' element={<NewPrj/>}/>
+          <Route path='/Edit/:id' element={<ProjectEdit/>}/>
+          <Route path='*' element={<Home/>}/>
         </Routes>
       </Container>
       <Footer/>
