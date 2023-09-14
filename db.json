@@ -32,20 +32,24 @@
     },
     {
       "name": [
-        "joao"
+        "joao p"
       ],
       "budget": [
-        "754112"
+        "754145"
       ],
       "category": {
         "id": "3",
         "name": "Design"
       },
-      "cost": 0,
-      "services": [],
+      "cost": 200,
+      "services": [
+        {
+          "cost": "200",
+          "id": "1b8e695f-c1bc-4b17-9b53-5631c4d3fdee"
+        }
+      ],
       "id": 6
     }
-   
   ],
   "categories": [
     {
