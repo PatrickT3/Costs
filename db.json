@@ -41,11 +41,31 @@
         "id": "3",
         "name": "Design"
       },
-      "cost": 200,
+      "cost": 15240,
       "services": [
         {
-          "cost": "200",
-          "id": "1b8e695f-c1bc-4b17-9b53-5631c4d3fdee"
+          "name": "serviço 1",
+          "cost": "4000",
+          "description": "pirulitao",
+          "id": "e9f23013-261b-436b-94bf-9ee499820c79"
+        },
+        {
+          "name": "serviço 2",
+          "cost": "4000",
+          "description": "pirulitao",
+          "id": "b98bea2a-4830-4e88-ab31-0b0255dfe9af"
+        },
+        {
+          "name": "comer puta",
+          "cost": "7000",
+          "description": "enfiar a vara",
+          "id": "c4babe2d-1801-4375-b2b1-7087a2e1dbf0"
+        },
+        {
+          "name": "fazer bollo",
+          "cost": "40",
+          "description": "cozinhar",
+          "id": "0e17ef0b-65c8-423f-8c20-dc4d34c6882d"
         }
       ],
       "id": 6

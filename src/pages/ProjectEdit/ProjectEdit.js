@@ -11,6 +11,7 @@ import Input from '../../components/Form/input/Input'
 import Select from '../../components/Form/Select/Select'
 import FLbutton from '../../components/Form/FLbutton/FLbutton'
 import ServiceForm from '../../components/service/ServiceForm';
+import ServiceCard from '../../components/service/ServiceCard';
 
 
 const ProjectEdit = () => {
@@ -21,6 +22,7 @@ const ProjectEdit = () => {
   const [categoria, setCategoria] = useState([]);
   const [message,setMessage] = useState();
   const [type,setType] = useState();
+  const [services,setServices] = useState([]);
 
 
   useEffect(() => {
@@ -46,6 +48,7 @@ const ProjectEdit = () => {
       .then(resp => resp.json())
       .then(data => {
         setProject(data)
+        setServices(data.services)
       })
       .catch(erro => console.log(erro))
     },500)  
@@ -118,11 +121,32 @@ const ProjectEdit = () => {
       },
       body: JSON.stringify(proj),
     }).then(resp => resp.json()).then(data =>{
+      setShowServiceForm(false)
       setMessage("success")
       setType('success')
     }).catch(err => console.log(err))
   }
  
+  function removeService(id, cost){
+    const servicesUpdated = project.services.filter(
+      service => service.id !== id
+    )
+    const projectUpdate = project
+
+    projectUpdate.services = servicesUpdated
+    projectUpdate.cost = parseFloat(projectUpdate.cost) - parseFloat(cost)
+
+    fetch(`http://localhost:5000/projects/${projectUpdate.id}`,{
+      method: 'PATCH',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(projectUpdate)
+      }).then(resp => resp.json())
+      .then(data => {
+        setProject(projectUpdate)
+        setServices(servicesUpdated)
+        alert('Serviço removido com success')
+      })
+  }
   
   return (
     <div>
@@ -198,7 +222,19 @@ const ProjectEdit = () => {
             <div>
               <h2>Serviços</h2>
               <Container customClass="start">
-                <p>Itens de serviço</p>
+                {services.length > 0 &&
+                  services.map(service => (
+                    <ServiceCard
+                      id = {service.id}
+                      name = {service.name}
+                      cost= {service.cost}
+                      description = {service.description}
+                      key = {service.id}
+                      handleRemove = {removeService}
+                    />
+                  ))
+                }
+                {services.length === 0 && <p>não a serviços cadastrados.</p>}
               </Container>
             </div>
           </Container>
